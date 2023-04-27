@@ -111,6 +111,10 @@ CANVAS.addEventListener('mousedown', (e) => {
 CANVAS.addEventListener('mouseup', () => {
     CANVAS.removeEventListener('mousemove', draw);
 })
+//si el mouse sale del canvas con mousedown, quitamos el evento con la funcion que dibuja 
+CANVAS.addEventListener('mouseleave', () => {
+    CANVAS.removeEventListener('mousemove', draw);
+})
 
 CLEANBUTTON.addEventListener('click', () => {
     cleanCanvas();
