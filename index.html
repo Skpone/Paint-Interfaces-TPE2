@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Paint</title>
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas" width="1000" height="500"></canvas> <!-- donde vamos a dibujar -->
+
+        <!-- todas las herramientas que podemos usar (el espacio entre elementos significa que engloba una funcionalidad) -->
+        <div class="tools">
+            <input type="color" id="color"> <!-- selector de color -->
+
+            <!-- selector de ancho del lapiz -->
+            <input type="range" id="lineWidth" min="3" max="10" value="3"> <!-- poner value 3 no es necesario (pq ya esta definido en js) pero queda bien al refreshear la pagina-->
+
+            <!-- lapiz -->
+            <button id="pencil">Lapiz</button>
+
+            <!-- goma -->
+            <button id="eraser">Goma</button>
+
+            <!-- "nuevo lienzo" -->
+            <button id="clean-out">Limpiar Canvas</button>
+
+            <!-- para subir imagen -->
+            <label for="imageUpload">Subir Imagen:</label>
+            <input type="file" id="imageLoader">
+
+            <!-- para descargar el dibujo hecho -->
+            <button id="download-draw">Descargar dibujo</button>
+
+            <!-- filtros -->
+            <label for="filters">Filtros:</label>
+            <select id="filters">
+                <option value="negative" class="filter">Negativo</option>
+                <option value="brightness" class="filter">Brillo</option>
+                <option value="binarization" class="filter">Binarización</option>
+                <option value="sepia" class="filter">Sepia</option>
+                <option value="saturation" class="filter">Saturación</option>
+                <option value="blur" class="filter">Blur</option>
+            </select>
+            <button id="filter-button">Aplicar Filtro</button>
+        </div>
+    </div>
+
+    <script src="js/Imagen.js"></script>
+    <script src="js/Pencil.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

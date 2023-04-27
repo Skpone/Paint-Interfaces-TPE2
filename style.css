@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+}
+
+.container { /*acomodamos los elementos que ocupen toda la pantalla y que queden centrados*/
+    height: 100vh; /*que ocupen toda la pantalla*/
+    width: 100vw;
+    display: flex;
+    flex-direction: column; /*los organizamos uno arriba del otro*/
+    align-items: center; /*los centramos*/
+    justify-content: center;
+}
+
+#canvas{
+    border: 2px solid black;
+}
