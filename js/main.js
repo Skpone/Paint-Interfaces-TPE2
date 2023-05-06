@@ -83,6 +83,10 @@ function filter() {
         case "blur": {
             imagen.filterBlur();
         } break;
+        case "original": {
+            imagen.filterOriginal();
+            break;
+        }
     }
 }
 
