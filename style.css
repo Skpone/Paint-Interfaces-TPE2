@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #333;
 }
 
 .container { /*acomodamos los elementos que ocupen toda la pantalla y que queden centrados*/
@@ -11,6 +12,23 @@ body{
     justify-content: center;
 }
 
+.container .tools {
+    background-color: #999;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.container .tools * {
+    background-color: #999;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
 #canvas{
-    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
 }
