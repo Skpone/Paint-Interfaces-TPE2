@@ -30,6 +30,10 @@ class Imagen {
     this.ctx.putImageData(ImageData, 0, 0);
   }
 
+  filterOriginal() { //volvemos a nuestra imagen original (la ultima imagen que subimos)
+    this.ctx.drawImage(this.image, 0, 0, this.canvasWidth, this.canvasHeight);
+  }
+
   filterNegative() {
     let imageData = this.getImageData();
 
